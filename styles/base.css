@@ -1,0 +1,290 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background-color: white;
+    font-size: 14px;
+}
+
+.top-header {
+    height: 50px;
+    background-color: #1f5278;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.course-title {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.navigation {
+    height: 28px;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation li {
+    width: 25%;
+    text-align: center;
+}
+
+.navigation a {
+    display: block;
+    padding: 6px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.navigation a:hover {
+    background-color: #555;
+}
+
+.container {
+    width: 96%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 15px 0 10px;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: normal;
+    margin: 5px 0 15px;
+    color: #222;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+section.card-title,
+.resources-card {
+    border: 1px solid #1f5278;
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: white;
+}
+
+div.card-title {
+    height: 35px;
+    background-color: #1f5278;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.about-content {
+    padding: 15px;
+}
+
+.intro {
+    min-height: 120px;
+    position: relative;
+}
+
+.intro p {
+    margin: 5px 110px 0 0;
+    line-height: 1.65;
+    font-size: 12px;
+}
+
+.profile-image {
+    width: 90px;
+    height: 120px;
+    object-fit: cover;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    border: none;
+}
+
+.about-content h2 {
+    width: 75%;
+    margin: 15px auto 15px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #aaa;
+}
+
+.Nigeria-section {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.flag-container {
+    width: 110px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.Nigeria-flag {
+    width: 100px;
+    height: 60px;
+    margin: 3px auto 8px;
+    border: 1px solid #ccc;
+    display: flex;
+}
+
+.Nigeria-flag > .flag-green {
+    width: 33.33%;
+    height: 100%;
+    background-color: #008751;
+}
+
+.flag-colors {
+    width: 66.66%;
+    height: 100%;
+    display: flex;
+}
+
+.flag-white {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}
+
+.flag-colors > .flag-green {
+    width: 50%;
+    height: 100%;
+    background-color: #008751;
+}
+
+.caption {
+    margin: 0;
+    font-size: 9px;
+    font-style: italic;
+    line-height: 1.4;
+    color: #555;
+}
+
+.Nigeria-text {
+    flex: 1;
+}
+
+.Nigeria-text p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.resources-content {
+    padding: 15px;
+}
+
+.resources-content ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.resources-content li {
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.resources-content a {
+    color: #0000ee;
+    text-decoration: underline;
+}
+
+.resources-content a:hover {
+    color: #551a8b;
+}
+
+.footer {
+    background-color: #1f5278;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px 0;
+    min-height: 50px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 11px;
+}
+
+.footer .flower {
+    color: #ff00aa;
+    font-size: 12px;
+}
+
+.last-modified {
+    color: #ffff00;
+    margin-top: 5px !important;
+    font-size: 9px !important;
+}
+
+@media screen and (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro p {
+        margin-right: 105px;
+    }
+
+    .profile-image {
+        width: 80px;
+        height: 110px;
+    }
+
+    .navigation ul {
+        flex-wrap: wrap;
+    }
+
+    .navigation li {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .course-title {
+        font-size: 13px;
+    }
+
+    .container h1 {
+        font-size: 23px;
+    }
+
+    .navigation a {
+        font-size: 11px;
+    }
+
+    .Nigeria-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flag-container {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
