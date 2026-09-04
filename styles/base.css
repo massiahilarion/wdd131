@@ -2,31 +2,40 @@
     box-sizing: border-box;
 }
 
+/* 1. STRUCTURAL ENTRY: Main layout tag identifier base */
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif; /* Fallback hooks into your new Google font */
     color: #222;
     background-color: white;
     font-size: 14px;
 }
 
-.top-header {
-    height: 50px;
+/* 2. STRUCTURAL ENTRY: Header container base element rule */
+header {
     background-color: #1f5278;
+}
+
+.top-header {
+    min-height: 50px;
     display: flex;
+    flex-direction: column; /* Stack course title and nav vertically */
     justify-content: center;
-    align-items: center;
     color: white;
 }
 
-.course-title {
+/* FIX: Updated from class hook selector to specific assignment ID parameter */
+#course-title {
     font-size: 16px;
-    font-weight: normal;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 0 10px 0;
+    display: block;
 }
 
 .navigation {
-    height: 28px;
+    min-height: 28px;
     background-color: #333;
     margin: 0;
     padding: 0;
@@ -57,6 +66,11 @@ body {
     background-color: #555;
 }
 
+/* 3. STRUCTURAL ENTRY: Explicit main block formatting parameter rule added */
+main {
+    display: block;
+}
+
 .container {
     width: 96%;
     max-width: 1050px;
@@ -79,12 +93,13 @@ body {
     align-items: start;
 }
 
-section.card-title,
-.resources-card {
+/* FIX: Redefined selectors to uniform .card element target array mapping pattern */
+.card {
     border: 1px solid #1f5278;
     border-radius: 7px;
     overflow: hidden;
     background-color: white;
+    margin-bottom: 10px;
 }
 
 div.card-title {
@@ -217,11 +232,15 @@ div.card-title {
     color: #551a8b;
 }
 
-.footer {
+/* 4. STRUCTURAL ENTRY: Footer container block definition */
+footer {
     background-color: #1f5278;
+    margin-top: 30px;
+}
+
+.footer {
     color: white;
     text-align: center;
-    margin-top: 30px;
     padding: 15px 0;
     min-height: 50px;
 }
@@ -231,8 +250,9 @@ div.card-title {
     font-size: 11px;
 }
 
+/* FIX: Adjusted high-risk color parameter to bright pastel yellow to resolve contrast warnings */
 .footer .flower {
-    color: #ff00aa;
+    color: #fff275;
     font-size: 12px;
 }
 
@@ -266,8 +286,8 @@ div.card-title {
 }
 
 @media screen and (max-width: 450px) {
-    .course-title {
-        font-size: 13px;
+    #course-title {
+        font-size: 14px;
     }
 
     .container h1 {

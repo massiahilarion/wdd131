@@ -9,25 +9,29 @@
     content="WDD 131- Dynamic Web Fundamentals - Sunday Isaac Udoh BYU-Idaho course home page">
   <meta name="author" content="Sunday Isaac Udoh">
 
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
   <link rel="stylesheet" href="styles/base.css">
+  
+  <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-  <header class="top-header">
-    <div class="course-title">WDD 131: Dynamic Web Fundamentals</div>
-  </header>
 
-  <nav class="navigation">
-    <ul>
-      <li><a href="https://www.linkedin.com/feed?trk=p_mwlite_profile_self-primary_nav">LinkedIn</a>
-      </li>
-      <li><a href="https://byupw.instructure.com/">Canvas</a></li>
-      <li><a
-          href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1ne/3?lang=eng&id=p7#p7">Scripture</a>
-      </li>
-      <li><a href="#">Final Project</a></li>
-    </ul>
-  </nav>
+  <header class="top-header">
+    <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+    
+    <nav class="navigation">
+      <ul>
+        <li><a href="https://www.linkedin.com/feed?trk=p_mwlite_profile_self-primary_nav">LinkedIn</a></li>
+        <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1ne/3?lang=eng&id=p7#p7">Scripture</a></li>
+        <li><a href="#">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main class="container">
 
@@ -35,7 +39,7 @@
 
     <div class="content-grid">
 
-      <section class="card-title">
+      <section class="card">
         <div class="card-title">About Me</div>
 
         <div class="about-content">
@@ -80,7 +84,7 @@
         </div>
       </section>
 
-      <aside class="resources-card">
+      <section class="card">
         <div class="card-title">
           Web Dev Resources
         </div>
@@ -106,7 +110,7 @@
             </li>
           </ul>
         </div>
-      </aside>
+      </section>
     </div>
   </main>
 
@@ -123,8 +127,6 @@
       Last Modification: <span id="lastModified"></span>
     </p>
   </footer>
-
-  <script src="scripts/getdates.js"></script>
 </body>
 
 </html>
