@@ -1,0 +1,49 @@
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        padding: 1rem 3rem;
+    }
+
+    header {
+        flex-direction: row;
+        padding: 1rem 3rem;
+    }
+
+    #primary-nav {
+        display: block !important; 
+        position: static;
+        width: auto;
+        background: none;
+        box-shadow: none;
+    }
+
+    #primary-nav ul {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    #primary-nav a {
+        border-top: none;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    #primary-nav a:hover {
+        background: none;
+        text-decoration: underline; 
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem 1.5rem;
+        padding: 0 1rem;
+    }
+
+    figure {
+        max-width: 100%; 
+    }
+
+    footer {
+        padding: 1.5rem 3rem;
+    }
+}
