@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uyo, Akwa Ibom | Place</title>
+  <meta name="description" content="State data and weather snapshot for Uyo, capital of Akwa Ibom State, Nigeria.">
+  <meta name="author" content="Sunday Isaac Udoh">
+
+
+  <link rel="stylesheet" href="styles/place.css">
+
+
+  <link rel="icon" href="data:,">
+
+
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Uyo, Akwa Ibom State</h1>
+  </header>
+  <div class="accent-bar"></div>
+
+  <main>
+    <section class="hero" aria-label="Uyo hero image with data and weather overlays">
+
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="images/Le-meridien-Ibom.webp">
+        <img
+          src="images/dakkada-tower.webp"
+          srcset="images/uyo-mobile.webp 480w, images/uyo-wide.webp 1200w"
+          sizes="(min-width: 768px) 100vw, 100vw"
+          alt="Dakkada Towers skyline in Uyo, capital of Akwa Ibom State"
+          class="hero-img"
+          width="1200"
+          height="800">
+      </picture>
+
+      <div class="data-card">
+        <h2>Data</h2>
+        <dl>
+          <div class="row"><dt>Area:</dt><dd>7,081 sq km</dd></div>
+          <div class="row"><dt>Population:</dt><dd>5,482,177</dd></div>
+          <div class="row"><dt>Capital:</dt><dd>Uyo</dd></div>
+          <div class="row"><dt>Languages:</dt><dd>Ibibio, English</dd></div>
+          <div class="row"><dt>Currency:</dt><dd>Nigerian Naira (₦)</dd></div>
+          <div class="row"><dt>Time Zone:</dt><dd>UTC+1</dd></div>
+          <div class="row"><dt>Calling Code:</dt><dd>+234</dd></div>
+          <div class="row"><dt>Internet TLD:</dt><dd>.ng</dd></div>
+        </dl>
+      </div>
+
+      <div class="weather-card">
+        <h2 class="weather-heading">Weather</h2>
+
+        <img
+          src="images/weather_mix.svg"
+          alt="Thunderstorm weather icon"
+          class="weather-icon-svg"
+          width="60"
+          height="60">
+
+        <dl>
+          <div class="row"><dt>Temperature:</dt><dd id="temperature">27 &deg;C</dd></div>
+          <div class="row"><dt>Conditions:</dt><dd>Thunderstorms</dd></div>
+          <div class="row"><dt>Wind:</dt><dd id="wind">12 km/h</dd></div>
+          <div class="row"><dt>Wind Chill:</dt><dd id="windChill">Calculating&hellip;</dd></div>
+        </dl>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+  <p>&copy; <span id="year"></span> &#127804; Sunday Isaac Udoh &#127804; Nigeria</p>
+  <p>Last Modification: <span id="lastModified"></span></p>
+ </footer>
+
+</body>
+</html>
