@@ -111,10 +111,6 @@ dl {
   margin: 0 auto var(--spacing-sm) auto;
 }
 
-.weather-heading::after {
-  content: none;
-}
-
 .site-footer {
   background-color: var(--color-primary);
   color: var(--color-white);
