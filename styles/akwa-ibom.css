@@ -1,13 +1,13 @@
 :root {
-  --color-primary: #008751;   
-  --color-secondary: #00602F; 
-  --color-white: #FFFFFF;
-  --color-dark: #222222;
-  --color-light-bg: #F4FAF6;
-  --color-card-bg: #FFFFFF;  
+  --bg-header: #008751;   
+  --brand-secondary: #00602F; 
+  --bg-pure: #FFFFFF;
+  --text-main: #222222;
+  --bg-light: #F4FAF6;
+  --bg-card: #FFFFFF;  
 
-  --color-border-muted: rgba(0, 0, 0, 0.08);
-  --color-shadow-ambient: rgba(0, 0, 0, 0.25);
+  --border-translucent: #00000014;
+  --shadow-translucent: #00000040;
 
   --font-heading: 'Poppins', 'Segoe UI', sans-serif;
   --font-body: 'Open Sans', Arial, sans-serif;
@@ -27,9 +27,12 @@
 
 body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
   font-family: var(--font-body);
-  color: var(--color-dark);
-  background-color: var(--color-light-bg);
+  color: var(--text-main);
+  background-color: var(--bg-light);
 }
 
 h1, h2 {
@@ -46,7 +49,7 @@ dl {
   justify-content: space-between;
   gap: var(--spacing-sm);
   padding: var(--spacing-xs) 0;
-  border-bottom: 1px solid var(--color-border-muted);
+  border-bottom: 1px solid var(--border-translucent);
 }
 
 .row dt {
@@ -59,26 +62,24 @@ dl {
 }
 
 .site-header {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--bg-header);
+  color: var(--bg-pure);
   text-align: center;
   padding: var(--spacing-md);
 }
 
 .accent-bar {
   height: 6px;
-  background-color: var(--color-white);
-  border-top: 2px solid var(--color-primary);
-  border-bottom: 2px solid var(--color-primary);
+  background-color: var(--bg-pure);
+  border-top: 2px solid var(--bg-header);
+  border-bottom: 2px solid var(--bg-header);
 }
 
 .hero {
   position: relative;
-  width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
 }
 
 .hero picture {
@@ -95,13 +96,13 @@ dl {
 
 .data-card,
 .weather-card {
-  background-color: var(--color-white);
+  background-color: var(--bg-pure);
   padding: var(--spacing-md);
 }
 
 .data-card h2,
 .weather-card h2 {
-  color: var(--color-primary);
+  color: var(--bg-header);
   text-align: center;
   padding-bottom: var(--spacing-sm);
 }
@@ -112,8 +113,8 @@ dl {
 }
 
 .site-footer {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--bg-header);
+  color: var(--bg-pure);
   text-align: center;
   padding: var(--spacing-md);
   margin-top: var(--spacing-lg);
@@ -137,9 +138,9 @@ dl {
   .weather-card {
     position: absolute;
     width: 260px;
-    background-color: var(--color-card-bg);
+    background-color: var(--bg-card);
     border-radius: var(--radius);
-    box-shadow: 0 4px 12px var(--color-shadow-ambient);
+    box-shadow: 0 4px 12px var(--shadow-translucent);
   }
 
   .data-card {
