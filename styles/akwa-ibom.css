@@ -79,7 +79,8 @@ dl {
   position: relative;
   width: 100%;
   max-width: 100%;
-  margin: 0;
+  margin: 0 auto;
+  display: block;
 }
 
 .hero picture {
@@ -91,7 +92,9 @@ dl {
   display: block;
   width: 100%;
   height: auto;
+  min-height: 300px; 
   object-fit: cover;
+  object-position: center;
 }
 
 .data-card,
@@ -128,29 +131,32 @@ dl {
 
   .hero {
     overflow: hidden;
+    height: 550px; 
   }
 
   .hero-img {
-    height: 500px;
+    height: 100%; 
+    min-height: 550px;
   }
 
   .data-card,
   .weather-card {
     position: absolute;
-    width: 260px;
+    width: 280px;
     background-color: var(--bg-card);
     border-radius: var(--radius);
     box-shadow: 0 4px 12px var(--shadow-translucent);
+    z-index: 10; 
   }
 
   .data-card {
-    top: var(--spacing-md);
-    left: var(--spacing-md);
+    top: var(--spacing-lg);
+    left: var(--spacing-lg);
   }
 
   .weather-card {
-    bottom: var(--spacing-md);
-    right: var(--spacing-md);
+    bottom: var(--spacing-lg);
+    right: var(--spacing-lg);
   }
 
   .weather-icon-svg {
