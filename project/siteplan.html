@@ -3,208 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Website planning document for NaijaForage, a guide to safely identifying edible wild plants across Nigeria, covering site purpose, scenarios, color schema, typography, and wireframes.">
+<meta name="author" content="Sunday Isaac Udoh">
 <title>Website Planning Document — NaijaForage</title>
-<style>
-  :root {
-    --forest: #1B4332;
-    --gold: #C99A2E;
-    --soil: #7C4A2D;
-    --cream: #F7F2E7;
-    --ink: #2B2620;
-    --warn: #A63A26;
-  }
-
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    background: var(--cream);
-    color: var(--ink);
-    font-family: 'Public Sans', Arial, sans-serif;
-    line-height: 1.6;
-  }
-
-  h1, h2, h3 {
-    font-family: 'Fraunces', Georgia, serif;
-    color: var(--forest);
-    line-height: 1.2;
-    margin-top: 0;
-  }
-
-  header {
-    background: var(--forest);
-    color: var(--cream);
-    padding: 2.5rem 1.5rem;
-  }
-
-  header h1 {
-    color: var(--cream);
-    font-size: 2rem;
-    margin-bottom: 0.4rem;
-  }
-
-  header p {
-    margin: 0;
-    color: #D8E3DA;
-    font-size: 1rem;
-  }
-
-  main {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem 4rem;
-  }
-
-  section {
-    margin-bottom: 2.75rem;
-    border-bottom: 1px solid #DDD2BC;
-    padding-bottom: 2.5rem;
-  }
-
-  section:last-child {
-    border-bottom: none;
-  }
-
-  section h2 {
-    font-size: 1.4rem;
-    border-left: 4px solid var(--gold);
-    padding-left: 0.7rem;
-    margin-bottom: 1rem;
-  }
-
-  .example {
-    background: #FFFFFF;
-    border: 1px solid #E3D9C2;
-    border-left: 4px solid var(--soil);
-    padding: 1rem 1.2rem;
-    border-radius: 4px;
-    margin-top: 1rem;
-  }
-
-  .example p {
-    margin: 0.3rem 0;
-  }
-
-  ul {
-    padding-left: 1.3rem;
-  }
-
-  li {
-    margin-bottom: 0.5rem;
-  }
-
-  .file-list {
-    background: #FFFFFF;
-    border: 1px solid #E3D9C2;
-    border-radius: 4px;
-    padding: 1rem 1.4rem;
-    font-family: 'Courier New', monospace;
-    font-size: 0.9rem;
-  }
-
-  .color-swatches {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.9rem;
-    margin-top: 1rem;
-  }
-
-  .swatch {
-    width: 150px;
-    border: 1px solid #E3D9C2;
-    border-radius: 4px;
-    overflow: hidden;
-    background: #FFFFFF;
-    font-size: 0.85rem;
-  }
-
-  .swatch-color {
-    height: 60px;
-  }
-
-  .swatch p {
-    margin: 0;
-    padding: 0.5rem 0.6rem;
-  }
-
-  .type-sample {
-    background: #FFFFFF;
-    border: 1px solid #E3D9C2;
-    border-radius: 4px;
-    padding: 1rem 1.2rem;
-    margin-top: 0.8rem;
-  }
-
-  .type-sample .heading-font {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 1.5rem;
-    color: var(--forest);
-    margin: 0 0 0.3rem;
-  }
-
-  .type-sample .body-font {
-    font-family: 'Public Sans', Arial, sans-serif;
-    margin: 0;
-  }
-
-  .wireframe-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-top: 1rem;
-    align-items: flex-start;
-  }
-
-  .wireframe {
-    background: #FFFFFF;
-    border: 2px solid var(--forest);
-    border-radius: 4px;
-    padding: 6px;
-  }
-
-  .wireframe h3 {
-    font-family: 'Public Sans', Arial, sans-serif;
-    font-size: 0.85rem;
-    color: var(--soil);
-    text-align: center;
-    margin: 0 0 6px;
-  }
-
-  .wf-mobile {
-    width: 160px;
-  }
-
-  .wf-desktop {
-    width: 340px;
-  }
-
-  .wf-block {
-    border: 1px dashed #A99A78;
-    background: #F7F2E7;
-    color: var(--ink);
-    font-size: 0.65rem;
-    text-align: center;
-    padding: 6px 4px;
-    margin-bottom: 5px;
-    border-radius: 2px;
-  }
-
-  .wf-row {
-    display: flex;
-    gap: 5px;
-  }
-
-  .wf-row .wf-block {
-    flex: 1;
-  }
-
-  footer {
-    text-align: center;
-    padding: 1.5rem;
-    color: var(--soil);
-    font-size: 0.85rem;
-  }
-</style>
+<link rel="stylesheet" href="styles/siteplan.css">
 </head>
 <body>
 
@@ -264,23 +66,23 @@
     <p>The palette draws from the colors of Nigerian farmland and forest: deep green leaves, laterite soil, and harmattan gold light. It is used consistently across this document.</p>
     <div class="color-swatches">
       <div class="swatch">
-        <div class="swatch-color" style="background:#1B4332;"></div>
+        <div class="swatch-color forest"></div>
         <p><strong>Forest Green</strong><br>#1B4332<br>Headings, header, nav</p>
       </div>
       <div class="swatch">
-        <div class="swatch-color" style="background:#C99A2E;"></div>
+        <div class="swatch-color gold"></div>
         <p><strong>Harmattan Gold</strong><br>#C99A2E<br>Accents, section markers</p>
       </div>
       <div class="swatch">
-        <div class="swatch-color" style="background:#7C4A2D;"></div>
+        <div class="swatch-color soil"></div>
         <p><strong>Laterite Soil</strong><br>#7C4A2D<br>Example boxes, secondary accents</p>
       </div>
       <div class="swatch">
-        <div class="swatch-color" style="background:#F7F2E7;"></div>
+        <div class="swatch-color cream"></div>
         <p><strong>Palm Cloth Cream</strong><br>#F7F2E7<br>Page background</p>
       </div>
       <div class="swatch">
-        <div class="swatch-color" style="background:#A63A26;"></div>
+        <div class="swatch-color warn"></div>
         <p><strong>Toxic Warning Red</strong><br>#A63A26<br>Safety/look-alike alerts</p>
       </div>
     </div>
@@ -312,7 +114,7 @@
       <div class="wireframe wf-mobile">
         <h3>Mobile</h3>
         <div class="wf-block">logo + menu icon</div>
-        <div class="wf-block" style="height:70px;">hero image + intro</div>
+        <div class="wf-block wf-hero">hero image + intro</div>
         <div class="wf-block">safety notice</div>
         <div class="wf-block">featured plant</div>
         <div class="wf-block">featured plant</div>
@@ -323,7 +125,7 @@
       <div class="wireframe wf-desktop">
         <h3>Desktop / wide viewport</h3>
         <div class="wf-block">logo &nbsp;&nbsp;&nbsp;&nbsp; nav: plants · identify · about</div>
-        <div class="wf-block" style="height:70px;">hero image + intro text</div>
+        <div class="wf-block wf-hero">hero image + intro text</div>
         <div class="wf-block">safety notice banner</div>
         <div class="wf-row">
           <div class="wf-block">featured plant</div>
@@ -339,7 +141,7 @@
 </main>
 
 <footer>
-   Project: Website Planning Document
+   Dynamic Web Development · Project: Website Planning Document
 </footer>
 
 </body>
