@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Temple Album | WDD 131</title>
+  <meta name="description" content="A dynamically filtered photo album of temples of The Church of Jesus Christ of Latter-day Saints.">
+  <meta name="author" content="Sunday Isaac Udoh">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="site-title">Temple Album</div>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="menu-icon">☰</span>
+    </button>
+    <nav id="primary-nav">
+        <ul>
+            <li><a href="#" data-filter="home">Home</a></li>
+            <li><a href="#" data-filter="old">Old</a></li>
+            <li><a href="#" data-filter="new">New</a></li>
+            <li><a href="#" data-filter="large">Large</a></li>
+            <li><a href="#" data-filter="small">Small</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 id="page-heading">Home</h1>
+
+    <div class="gallery" id="temple-cards">
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="year"></span> ✿ Sunday I. Udoh ✿ Nigeria</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </footer>
+
+</body>
+</html>
