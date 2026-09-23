@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Console | WDD131</title>
+  <meta name="description" content="Submit a review for your time-travel era gadget: rate it, note the install date, and flag the features you found useful.">
+  <meta name="author" content="Sunday Isaac Udoh">
+
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <h1>Product Review</h1>
+      <p>Tell us how your gadget held up.</p>
+    </header>
+
+    <div class="console">
+      <div class="console-strip" aria-hidden="true"></div>
+
+      <form action="review.html" method="get">
+        <p class="required-note"><span class="required-tag">*</span> indicates a required field</p>
+
+        <div class="field">
+          <label class="field-label" for="product-name">Product Name <span class="required-tag" aria-hidden="true">*</span></label>
+          <select id="product-name" name="product" required>
+            <option value="" disabled selected>Select a Product ...</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Overall Rating <span class="required-tag" aria-hidden="true">*</span></legend>
+          <div class="stars">
+            <input type="radio" id="rating-5" name="overall-rating" value="5" required>
+            <label for="rating-5"><span class="sr-only">5 stars</span>★</label>
+            <input type="radio" id="rating-4" name="overall-rating" value="4" required>
+            <label for="rating-4"><span class="sr-only">4 stars</span>★</label>
+            <input type="radio" id="rating-3" name="overall-rating" value="3" required>
+            <label for="rating-3"><span class="sr-only">3 stars</span>★</label>
+            <input type="radio" id="rating-2" name="overall-rating" value="2" required>
+            <label for="rating-2"><span class="sr-only">2 stars</span>★</label>
+            <input type="radio" id="rating-1" name="overall-rating" value="1" required>
+            <label for="rating-1"><span class="sr-only">1 star</span>★</label>
+          </div>
+          <p class="rating-status" id="rating-status">No rating selected yet</p>
+        </fieldset>
+
+        <div class="field">
+          <label class="field-label" for="install-date">Date of Installation <span class="required-tag" aria-hidden="true">*</span></label>
+          <input type="date" id="install-date" name="installation-date" required>
+        </div>
+
+        <fieldset>
+          <legend>Which features did you find useful? <span class="optional-tag">(Check all that apply)</span></legend>
+          <div class="checkbox-grid">
+            <div class="checkbox-row">
+              <input type="checkbox" id="feature-durability" name="features" value="durability">
+              <label for="feature-durability">Durability</label>
+            </div>
+            <div class="checkbox-row">
+              <input type="checkbox" id="feature-ease" name="features" value="ease-of-use">
+              <label for="feature-ease">Ease of Use</label>
+            </div>
+            <div class="checkbox-row">
+              <input type="checkbox" id="feature-performance" name="features" value="performance">
+              <label for="feature-performance">Performance</label>
+            </div>
+            <div class="checkbox-row">
+              <input type="checkbox" id="feature-design" name="features" value="design">
+              <label for="feature-design">Design</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label class="field-label" for="written-review">Written Review <span class="optional-tag">(Optional)</span></label>
+          <textarea id="written-review" name="review" placeholder="What worked, what didn't, would you use it again?"></textarea>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="user-name">Your Name <span class="optional-tag">(Optional)</span></label>
+          <input type="text" id="user-name" name="username" placeholder="Marty, Doc, or anonymous">
+        </div>
+
+        <div class="submit-row">
+          <input type="submit" value="Post Review">
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 ✿ Sunday Isaac Udoh ✿ &middot; Nigeria<br>Last Modification: <span id="mod-date"></span></p>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("mod-date").textContent = document.lastModified;
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Posted | WDD131</title>
+  <meta name="description" content="Confirmation page showing the review you just submitted and how many reviews you've completed.">
+  <meta name="author" content="Sunday Isaac Udoh">
+
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/review.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <h1>Great You Are In!</h1>
+      <p>Here's what got logged.</p>
+    </header>
+
+    <div class="console">
+      <div class="console-strip" aria-hidden="true"></div>
+
+      <div class="confirmation">
+        <h2 id="confirmation-heading">Review Received</h2>
+
+        <section id="summary-section">
+          <h3 class="sr-only">Review Summary</h3>
+          <ul class="summary-list" id="summary-list"></ul>
+        </section>
+
+        <div class="counter-box">
+          <span>Reviews completed on this device</span>
+          <span class="count" id="review-count">0</span>
+        </div>
+
+        <a class="back-link" href="form.html">&larr; Submit another review</a>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 ✿ Sunday Isaac Udoh ✿ &middot; Nigeria<br>Last Modification: <span id="mod-date"></span></p>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("mod-date").textContent = document.lastModified;
+  </script>
+</body>
+</html>
