@@ -1,10 +1,10 @@
 :root {
-  --white: #ffffff;
+  --surface: #ffffff;
   --page-bg: #f4f7f4;
-  --header-green: #123524;
-  --header-green-soft: #1b4332;
-  --panel-green: #d7e4da;
-  --panel-green-edge: #c1d6c6;
+  --brand-dark: #123524;
+  --brand-mid: #1b4332;
+  --panel: #d7e4da;
+  --panel-edge: #c1d6c6;
   --ink: #14301f;
   --ink-soft: #4b6b5a;
   --accent: #2d6a4f;
@@ -48,7 +48,7 @@ body {
 
 .masthead {
   text-align: center;
-  background: var(--header-green);
+  background: var(--brand-dark);
   border-radius: 10px 10px 0 0;
   padding: 1.6rem 1.25rem 1.4rem;
 }
@@ -58,7 +58,7 @@ body {
   font-family: var(--font-display);
   font-size: 0.72rem;
   letter-spacing: 0.12em;
-  color: var(--panel-green);
+  color: var(--panel);
   margin-bottom: 0.4rem;
   opacity: 0.85;
 }
@@ -68,18 +68,18 @@ body {
   font-weight: 700;
   font-size: clamp(1.5rem, 5vw, 2.1rem);
   margin: 0;
-  color: var(--white);
+  color: var(--surface);
 }
 
 .masthead p {
-  color: var(--panel-green);
+  color: var(--panel);
   font-size: 0.95rem;
   margin: 0.5rem 0 0;
 }
 
 .console {
-  background: var(--panel-green);
-  border: 1px solid var(--panel-green-edge);
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
   border-top: none;
   border-radius: 0 0 10px 10px;
   overflow: hidden;
@@ -101,7 +101,7 @@ fieldset + fieldset,
 .field + fieldset,
 fieldset + .field,
 .field + .field {
-  border-top: 1px dashed var(--panel-green-edge);
+  border-top: 1px dashed var(--panel-edge);
   padding-top: 1.6rem;
 }
 
@@ -146,7 +146,7 @@ input[type="text"],
 input[type="date"],
 textarea {
   width: 100%;
-  background: var(--white);
+  background: var(--surface);
   border: 1px solid var(--border-strong);
   color: var(--ink);
   font-family: var(--font-body);
@@ -198,7 +198,7 @@ textarea {
 .stars label {
   font-size: 2rem;
   line-height: 1;
-  color: var(--white);
+  color: var(--surface);
   -webkit-text-stroke: 1.5px var(--accent);
   cursor: pointer;
   padding: 0.1rem;
@@ -240,7 +240,7 @@ textarea {
   width: 1.15rem;
   height: 1.15rem;
   accent-color: var(--accent-strong);
-  background: var(--white);
+  background: var(--surface);
 }
 
 .checkbox-row label {
@@ -259,7 +259,7 @@ input[type="submit"] {
   font-size: 0.9rem;
   letter-spacing: 0.04em;
   color: var(--ink);
-  background: var(--white);
+  background: var(--surface);
   border: 1px solid var(--border-strong);
   border-radius: 6px;
   padding: 0.85rem 1.6rem;
@@ -267,7 +267,7 @@ input[type="submit"] {
   transition: background 0.15s ease, transform 0.1s ease;
 }
 
-input[type="submit"]:hover { background: var(--panel-green-edge); }
+input[type="submit"]:hover { background: var(--panel-edge); }
 input[type="submit"]:active { transform: translateY(1px); }
 input[type="submit"]:focus-visible {
   outline: 2px solid var(--focus);
@@ -293,7 +293,7 @@ input[type="submit"]:focus-visible {
   display: grid;
   grid-template-columns: 11rem 1fr;
   gap: 0.5rem;
-  border-bottom: 1px dashed var(--panel-green-edge);
+  border-bottom: 1px dashed var(--panel-edge);
   padding-bottom: 0.6rem;
   font-size: 0.95rem;
 }
@@ -310,7 +310,7 @@ input[type="submit"]:focus-visible {
 .counter-box {
   margin-top: 1.75rem;
   padding: 1rem 1.2rem;
-  background: var(--white);
+  background: var(--surface);
   border: 1px solid var(--border-strong);
   border-radius: 8px;
   display: flex;
@@ -343,9 +343,9 @@ footer {
   text-align: center;
   margin: 1.5rem auto 0;
   padding: 1.1rem 1rem;
-  background: var(--header-green-soft);
+  background: var(--brand-mid);
   border-radius: 10px;
-  color: var(--white);
+  color: var(--surface);
   font-size: 0.82rem;
   width: 100%;
 }
@@ -356,5 +356,11 @@ footer p {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; }
+  select,
+  input[type="text"],
+  input[type="date"],
+  textarea,
+  input[type="submit"] {
+    transition: none;
+  }
 }
