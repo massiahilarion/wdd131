@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Inter:wght@400;500;600&display=swap');
-
 :root {
   --white: #ffffff;
+  --page-bg: #f4f7f4;
   --header-green: #123524;
   --header-green-soft: #1b4332;
   --panel-green: #d7e4da;
@@ -9,9 +8,11 @@
   --ink: #14301f;
   --ink-soft: #4b6b5a;
   --accent: #2d6a4f;
+  --accent-clear: #2d6a4f00;
   --accent-strong: #1b4332;
   --border-strong: #2d6a4f;
   --focus: #123524;
+  --focus-ring: #12352438;
 
   --font-display: 'JetBrains Mono', 'Courier New', monospace;
   --font-body: 'Inter', system-ui, sans-serif;
@@ -24,11 +25,20 @@ html { color-scheme: light; }
 body {
   margin: 0;
   min-height: 100vh;
-  background: #f4f7f4;
+  background: var(--page-bg);
   color: var(--ink);
   font-family: var(--font-body);
   line-height: 1.5;
   padding: clamp(1rem, 4vw, 3rem) 1rem 2.5rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 .page {
@@ -151,13 +161,13 @@ input:focus-visible,
 textarea:focus-visible {
   outline: none;
   border-color: var(--focus);
-  box-shadow: 0 0 0 3px rgba(18, 53, 36, 0.22);
+  box-shadow: 0 0 0 3px var(--focus-ring);
 }
 
 select {
   appearance: none;
-  background-image: linear-gradient(45deg, transparent 50%, var(--accent) 50%),
-    linear-gradient(135deg, var(--accent) 50%, transparent 50%);
+  background-image: linear-gradient(45deg, var(--accent-clear) 50%, var(--accent) 50%),
+    linear-gradient(135deg, var(--accent) 50%, var(--accent-clear) 50%);
   background-position: calc(100% - 20px) center, calc(100% - 15px) center;
   background-size: 6px 6px, 6px 6px;
   background-repeat: no-repeat;
