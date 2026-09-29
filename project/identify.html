@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Filter Nigerian wild edible plants by region and type to help identify what you've found.">
+<meta name="author" content="Sunday Isaac Udoh">
+<title>Identify a Plant — NaijaForage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
+<script src="scripts.js/plants-data.js"></script>
+<script src="scripts.js/main.js"></script>
+<script src="scripts.js/identify.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav-bar">
+    <a class="site-logo" href="index.html">NaijaForage</a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">Menu</button>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="identify.html">Identify a Plant</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section>
+    <h1>Identify a Plant</h1>
+    <p>Narrow the list by region and type. Results update instantly below the form.</p>
+
+    <form class="identify-form" id="identifyForm">
+      <div class="form-field">
+        <label for="regionSelect">Region</label>
+        <select id="regionSelect" name="region">
+          <option value="any">Any region</option>
+          <option value="south">South</option>
+          <option value="southwest">Southwest</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="typeSelect">Plant type</label>
+        <select id="typeSelect" name="type">
+          <option value="any">Any type</option>
+          <option value="leaf">Leaf</option>
+          <option value="fruit">Fruit</option>
+          <option value="seed">Seed</option>
+        </select>
+      </div>
+
+      <button type="submit" class="button">Search</button>
+      <p id="searchStats"></p>
+    </form>
+  </section>
+
+  <section>
+    <h2>Results</h2>
+    <div class="plant-grid" id="results"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="currentYear"></span>✿ Sunday I. Udoh ✿ Nigeria- NaijaForage. Last updated: <span id="lastModified"></span></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NaijaForage helps you safely identify edible wild plants found across Nigeria's forests, savannas, and wetlands.">
+<meta name="author" content="Sunday Isaac Udoh">
+<title>NaijaForage — Edible Wild Plants of Nigeria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
+<script src="scripts.js/plants-data.js"></script>
+<script src="scripts.js/main.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav-bar">
+    <a class="site-logo" href="index.html">NaijaForage</a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">Menu</button>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="identify.html">Identify a Plant</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Edible Wild Plants of Nigeria</h1>
+  <p>Learn to safely recognize the leaves, fruits, and seeds foraged across Nigeria's forests, savannas, and wetlands.</p>
+  <a class="button" href="identify.html">Try the Identification Tool</a>
+</section>
+
+<main>
+
+  <section>
+    <p class="safety-banner">Safety first: never eat any wild plant you cannot identify with full confidence. Some edible plants have toxic look-alikes.</p>
+  </section>
+
+  <section>
+    <h2>Featured Plants</h2>
+    <div class="plant-grid" id="featuredGrid">
+      <p>Loading featured plants…</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why NaijaForage?</h2>
+    <img
+      src="https://picsum.photos/id/292/900/400"
+      alt="Wild green leaves growing in a Nigerian forest clearing"
+      loading="lazy"
+      width="900"
+      height="400">
+    <p>NaijaForage pairs plant profile pages with an interactive identification tool, so home cooks and curious foragers can confidently recognize the wild plants already common in everyday Nigerian cooking.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="currentYear"></span>✿ Sunday I. Udoh ✿ Nigeria- NaijaForage. Last updated: <span id="lastModified"></span></p>
+</footer>
+</body>
+</html>
